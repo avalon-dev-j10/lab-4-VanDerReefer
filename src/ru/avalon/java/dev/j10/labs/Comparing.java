@@ -7,7 +7,7 @@ public class Comparing implements Comparator<String>{
 
     @Override
     public int compare(String string1, String string2) {
-        return string1.compareTo(string2); 
+        return string1.compareTo(string1); 
     }
    
 }

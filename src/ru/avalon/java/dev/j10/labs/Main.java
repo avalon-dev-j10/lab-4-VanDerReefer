@@ -71,6 +71,7 @@ public class Main {
          *    экземпляром созданного класса.
          */
         Comparing comparator = new Comparing();
+                
 
         /*
          * TODO(Студент): Отсортируйте массив persons по возрастанию
@@ -115,10 +116,12 @@ public class Main {
          * 2. С использованием отладчика убедитесь в том,
          *    что массив отсортирован по убыванию.
          */
-        sort.sort(strings, comparator);
+        
+        
+        sort.sort(strings, comparator.reversed()); // вот тут затык. Реверс не работает.
         
         for (String string : strings) {
             System.out.println(string);
         }
-    }
+    } 
 }
