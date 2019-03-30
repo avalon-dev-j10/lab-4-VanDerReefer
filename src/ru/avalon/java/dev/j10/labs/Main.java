@@ -1,6 +1,7 @@
 package ru.avalon.java.dev.j10.labs;
 
 import java.util.Comparator;
+import java.util.Random;
 
 public class Main {
 
@@ -12,7 +13,20 @@ public class Main {
          * чтобы он содержал 20 строк, расположенных не
          * по порядку.
          */
-	    String[] strings = null;
+	    String[] strings = new String[20];
+            
+                char symbol;
+                
+                for (int i = 0; i < strings.length; i++){
+                    
+                    symbol = (char)(new Random().nextInt(23)+65);
+                    
+                    strings[i] = "Some string " + symbol + new Random().nextInt(99);
+                    
+                    System.out.println(strings[i]);
+                }
+            
+               
 
 	    /*
 	     * TODO(Студент): Проинициализируйте массив persons
@@ -56,7 +70,7 @@ public class Main {
          * 2. С использованием отладчика убедитесь в том,
          *    что массив отсортирован по возрастанию.
          */
-        sort.sort(persons);
+//        sort.sort(persons);
 
         /*
          * TODO(Студент): Отсортируйте массив strings по возрастанию
@@ -68,7 +82,7 @@ public class Main {
          * 2. С использованием отладчика убедитесь в том,
          *    что массив отсортирован по возрастанию.
          */
-        sort.sort(strings);
+//        sort.sort(strings);
 
         /*
          * TODO(Студент): Отсортируйте массив strings по убыванию
@@ -79,6 +93,6 @@ public class Main {
          * 2. С использованием отладчика убедитесь в том,
          *    что массив отсортирован по убыванию.
          */
-        sort.sort(strings, comparator);
+//        sort.sort(strings, comparator);
     }
 }
