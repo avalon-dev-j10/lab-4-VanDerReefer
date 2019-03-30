@@ -1,6 +1,7 @@
 package ru.avalon.java.dev.j10.labs;
 
 import java.util.Comparator;
+import java.util.Date;
 import java.util.Random;
 
 public class Main {
@@ -21,13 +22,10 @@ public class Main {
                     
                     symbol = (char)(new Random().nextInt(23)+65);
                     
-                    strings[i] = "Some string " + symbol + new Random().nextInt(99);
+                    strings[i] = "# " + symbol + new Random().nextInt(99);
                     
-                    System.out.println(strings[i]);
                 }
             
-               
-
 	    /*
 	     * TODO(Студент): Проинициализируйте массив persons
 	     *
@@ -36,7 +34,22 @@ public class Main {
 	     * 2. Проинициализируйте массив persons 20
 	     *    экземплярыми созданного класса.
 	     */
-	    Person[] persons = null;
+            
+	    Worker[] persons = new Worker[20];
+            
+                for (int i = 0; i < strings.length; i++){
+                     
+                    persons[i] = new Worker(
+                            "Droid", 
+                            strings[i], 
+                            new Date(new Random().nextLong()) 
+                    );
+                
+                    System.out.println(
+                            persons[i].getName() + " " +
+                            persons[i].getBurthDateFormat());
+                     
+                 }
 
         /*
          * TODO(Студент): Проинициализируйте переменную sort
@@ -46,7 +59,7 @@ public class Main {
          * 2. Проинициализируйте переменную sort экземпляром
          *    созданного класса.
          */
-        Sort sort = null;
+  //      Sort sort = null;
 
         /*
          * TODO(Студент): Проинициализируйте переменную comparator
@@ -58,7 +71,7 @@ public class Main {
          * 2. Проинициализируйте переменную comparator
          *    экземпляром созданного класса.
          */
-        Comparator comparator = null;
+ //       Comparator comparator = null;
 
         /*
          * TODO(Студент): Отсортируйте массив persons по возрастанию
