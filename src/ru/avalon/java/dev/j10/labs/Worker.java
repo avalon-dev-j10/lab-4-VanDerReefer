@@ -7,9 +7,9 @@ import java.text.*;
 
 public class Worker implements Person{
     
-    private String name;
-    private String id;
-    private Date birthDate;
+    private final String name;
+    private final String id;
+    private final Date birthDate;
 
     public Worker(String name, String id, Date birthDate) {
         this.name = name;
@@ -26,12 +26,44 @@ public class Worker implements Person{
     public Date getBirthDate() {
         
         return birthDate;
+        
     }
 
     @Override
     public int compareTo(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+        
+        Worker droid = (Worker) o;
+        
+        if (this.name.compareTo(droid.name) > 0) {
+            
+            return 1;
+        }
+        
+        else if (this.name.compareTo(droid.name) < 0) {
+            
+            return -1;
+            
+        }
+        
+        else if (this.name.compareTo(droid.name) == 0) {
+            
+            if (this.birthDate.compareTo(droid.birthDate) > 0) {
+                
+                return 1;
+                
+                }
+                
+                else if (this.birthDate.compareTo(droid.birthDate) == 0) {
+                        
+                return 0;
+                
+                }
+            }
+        
+        return 0;
+        
+        }
+    
     
     public String getBurthDateFormat(){
     

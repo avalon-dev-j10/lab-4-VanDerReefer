@@ -1,6 +1,5 @@
 package ru.avalon.java.dev.j10.labs;
 
-import java.util.Comparator;
 import java.util.Date;
 import java.util.Random;
 
@@ -45,10 +44,10 @@ public class Main {
                             new Date(new Random().nextLong()) 
                     );
                 
-                    System.out.println(
-                            persons[i].getName() + " " +
-                            persons[i].getBurthDateFormat());
-                     
+/*                    System.out.println(
+*                            persons[i].getName() + " " +
+*                            persons[i].getBurthDateFormat());
+*/                     
                  }
 
         /*
@@ -59,7 +58,7 @@ public class Main {
          * 2. Проинициализируйте переменную sort экземпляром
          *    созданного класса.
          */
-  //      Sort sort = null;
+        Sorting sort = new Sorting();
 
         /*
          * TODO(Студент): Проинициализируйте переменную comparator
@@ -71,7 +70,7 @@ public class Main {
          * 2. Проинициализируйте переменную comparator
          *    экземпляром созданного класса.
          */
- //       Comparator comparator = null;
+        Comparing comparator = new Comparing();
 
         /*
          * TODO(Студент): Отсортируйте массив persons по возрастанию
@@ -83,7 +82,13 @@ public class Main {
          * 2. С использованием отладчика убедитесь в том,
          *    что массив отсортирован по возрастанию.
          */
-//        sort.sort(persons);
+        sort.sort(persons);
+        
+        for (int i = 0; i < strings.length; i++){
+            System.out.println(persons[i].getName());
+          
+        }
+        
 
         /*
          * TODO(Студент): Отсортируйте массив strings по возрастанию
