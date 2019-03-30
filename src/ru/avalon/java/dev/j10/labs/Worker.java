@@ -7,7 +7,7 @@ import java.text.*;
 
 public class Worker implements Person{
     
-    private final String name;
+    private String name;
     private final String id;
     private final Date birthDate;
 
@@ -19,7 +19,9 @@ public class Worker implements Person{
     
     @Override
     public String getName() {
-        return name + " " + id; 
+        name = (name + " " + id);
+        
+        return name; 
     }
 
     @Override

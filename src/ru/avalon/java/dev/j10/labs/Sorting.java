@@ -17,11 +17,11 @@ public class Sorting implements Sort{
     @Override
     public void sort(Comparable[] array) {
         
-       for (int i = 0; i < array.length - 1; i++){
+       for (int i = 0; i < array.length; i++){
            
            for (int j = 0; j < array.length; j++){
                
-               if (array[i].compareTo(array[j]) > 0) {
+               if (array[i].compareTo(array[j]) < 0) {
                    
                    Comparable swap = array[i];
                    
@@ -39,8 +39,24 @@ public class Sorting implements Sort{
 
     @Override
     public void sort(Object[] array, Comparator comparator) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    
-    
+        
+         for (int i = 0; i < array.length; i++){
+           
+           for (int j = 0; j < array.length; j++){
+               
+               if (comparator.compare(array[j], array[j]) > 0 ) {
+                   
+                   Object swap = array[i];
+                   
+                   array[i] = array[j];
+                   
+                   array[j] = swap;
+                   
+               }
+               
+           }
+           
+       }
+        
     }
 }

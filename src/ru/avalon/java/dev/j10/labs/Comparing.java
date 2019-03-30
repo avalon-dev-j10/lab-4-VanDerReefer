@@ -10,6 +10,4 @@ public class Comparing implements Comparator<String>{
         return string1.compareTo(string2); 
     }
    
-    
-    
 }

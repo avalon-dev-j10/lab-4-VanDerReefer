@@ -22,7 +22,7 @@ public class Main {
                     symbol = (char)(new Random().nextInt(23)+65);
                     
                     strings[i] = "# " + symbol + new Random().nextInt(99);
-                    
+              
                 }
             
 	    /*
@@ -39,8 +39,8 @@ public class Main {
                 for (int i = 0; i < strings.length; i++){
                      
                     persons[i] = new Worker(
-                            "Droid", 
                             strings[i], 
+                            "Droid", 
                             new Date(new Random().nextLong()) 
                     );
                 
@@ -100,8 +100,12 @@ public class Main {
          * 2. С использованием отладчика убедитесь в том,
          *    что массив отсортирован по возрастанию.
          */
-//        sort.sort(strings);
+        sort.sort(strings);
 
+        for (String string : strings) {
+            System.out.println(string);
+        }
+        
         /*
          * TODO(Студент): Отсортируйте массив strings по убыванию
          *
@@ -111,6 +115,10 @@ public class Main {
          * 2. С использованием отладчика убедитесь в том,
          *    что массив отсортирован по убыванию.
          */
-//        sort.sort(strings, comparator);
+        sort.sort(strings, comparator);
+        
+        for (String string : strings) {
+            System.out.println(string);
+        }
     }
 }
